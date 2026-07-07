@@ -6,6 +6,7 @@ import helmet from 'helmet';
 const app=express();
 
 app.use(corsMiddleware)
+app.use(helmet());
 
 
 
