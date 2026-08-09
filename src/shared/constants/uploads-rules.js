@@ -8,5 +8,6 @@ export const uploadsFilesRules={
     "image/avif"
     ],
     fileSizeLimit:15 * 1024 * 1024, //15MB
-    checkSignature:true
+    checkSignature:true,
+    fileCountLimit:10
 }

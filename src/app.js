@@ -3,6 +3,7 @@ import corsMiddleware from './config/cors.config.js'
 import helmet from 'helmet';
 import { errorHandler } from './middlewares/errorHandler.middleware.js';
 import { routeNotFound } from './middlewares/routeNotFound.middleware.js';
+import { sendSuccess } from './shared/response/response.js';
 
 
 const app=express();
@@ -12,10 +13,7 @@ app.use(helmet());
 
 app.get('/',(req,res)=>{
     // store IP that where it opens ->
-    return res.status(200).json({
-        status:true,
-        message:"Server is runing"
-    })
+    return sendSuccess(res,{statusCode:200,message:"Server is runing"})
 })
 
 

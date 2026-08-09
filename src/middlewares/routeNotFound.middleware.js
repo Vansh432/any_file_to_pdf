@@ -1,7 +1,5 @@
+import { sendError } from "../shared/response/response.js"
 
 export const routeNotFound=(req,res,next)=>{
-    return res.status(404).json({
-        status:false,
-        message:"Route not found"
-    })
+    return sendError(res,{statusCode:404,message:"Route not found"})
 }

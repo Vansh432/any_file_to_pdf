@@ -1,3 +1,5 @@
+import { sendError } from "../shared/response/response.js";
+
 export const errorHandler=(err,req,res,next)=>{
 
     const statusCode=err?.statusCode || 500
@@ -9,5 +11,5 @@ export const errorHandler=(err,req,res,next)=>{
     if(isDevelopment){
         response["stack"]=err?.stack;
     }
-    return res.status(statusCode).json(response)
+    return sendError(res,response)
 }
