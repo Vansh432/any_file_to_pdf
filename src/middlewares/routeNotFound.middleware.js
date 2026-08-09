@@ -1,0 +1,7 @@
+
+export const routeNotFound=(req,res,next)=>{
+    return res.status(404).json({
+        status:false,
+        message:"Route not found"
+    })
+}

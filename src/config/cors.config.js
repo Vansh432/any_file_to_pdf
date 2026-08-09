@@ -1,6 +1,7 @@
 import cors from 'cors';
+import { env } from './env.config.js';
 
-const allowDomainOrigin=process.env.NODE_ENV==="development"?process.env.allowDomain:""
+const allowDomainOrigin=(env.allowedDomain || "").split(",") || []
 const corsOptions={
         origin:(origin,callback)=>{
             if(!origin){
