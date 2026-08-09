@@ -1,5 +1,5 @@
 
-export const uploadsFilesRules={
+export const UPLOADS_FILE_RULES={
     allowedFileType:[
         "image/jpeg",
     "image/jpg",

@@ -1,7 +1,7 @@
 import multer from 'multer';
 import crypto from 'crypto'
 import path from "node:path"
-import { uploadsFilesRules } from '../shared/constants/uploads-rules.js';
+import { UPLOADS_FILE_RULES } from '../shared/constants/uploads-rules.js';
 
 
 const uploadedPath=path.join(process.cwd(),"uploads","temp")
@@ -26,6 +26,6 @@ const storage=multer.diskStorage(destAndFileName)
 export const uploads=multer({
     storage,
     limits:{
-        fileSize:uploadsFilesRules.fileSizeLimit
+        fileSize:UPLOADS_FILE_RULES.fileSizeLimit
     }
 })
