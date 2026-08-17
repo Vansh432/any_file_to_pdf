@@ -5,6 +5,7 @@ import {validateFiles} from '../shared/validations/uploadFile.validation.js'
 
 
 export const uploadFilesMiddleware=[uploads.array('files',UPLOADS_FILE_RULES.fileCountLimit || 1),asyncHandler((req,res,next)=>{
-        validateFiles(req.files=[],UPLOADS_FILE_RULES)
+       
+        validateFiles(req.files,UPLOADS_FILE_RULES)
         next()
 })]

@@ -7,6 +7,6 @@ import * as convertFile from './index.controller.js'
 const routes=Router();
 
 
-routes.post('/file',validatesBody(validationConvertFile),uploadFilesMiddleware,convertFile.convertFile)
+routes.post('/file',uploadFilesMiddleware,validatesBody(validationConvertFile),convertFile.convertFile)
 
 export default routes

@@ -4,6 +4,7 @@ import { env } from './config/env.config.js';
 //port 
 const port=env.PORT || 5000
 
+const startServer=()=>{
 app.listen(port,(err)=>{
     if(err){
         console.log("Server is not runing ",err);
@@ -12,3 +13,10 @@ app.listen(port,(err)=>{
      }
      console.log("Server is runing on port: ",port)
 })
+}
+
+startServer();
+
+
+
+
